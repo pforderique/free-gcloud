@@ -57,7 +57,7 @@ After apply completes, Terraform prints:
 ```
 external_ip = "<YOUR_VM_IP>"
 http_url    = "http://<YOUR_VM_IP>/"
-ssh_command = "ssh ubuntu@<YOUR_VM_IP>"
+ssh_command = "gcloud compute ssh <your-vm-name> --zone=us-east1-b"
 ```
 Visit that URL to verify your server (if using the `nginx-server.sh` startup
 script).
