@@ -49,7 +49,9 @@ resource "google_compute_instance" "vm" {
 
   network_interface {
     network = google_compute_network.vpc.name
-    access_config {} # ephemeral IP (free)
+    access_config {
+      nat_ip = var.nat_ip != "" ? var.nat_ip : null
+    }
   }
 
   metadata_startup_script = local.startup_script

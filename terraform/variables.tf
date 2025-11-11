@@ -20,6 +20,12 @@ variable "zone" {
   default     = "us-east1-b"
 }
 
+variable "nat_ip" {
+  description = "Static external IP address for the VM"
+  type        = string
+  default     = ""  # e.g. "35.123.45.67"
+}
+
 variable "ssh_source_cidr" {
   description = "CIDR range allowed for SSH"
   type        = string
