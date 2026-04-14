@@ -1,5 +1,5 @@
 locals {
-  startup_script     = file("${path.module}/../scripts/start/catsoop-server.sh")
+  startup_script     = file("${path.module}/../scripts/start/nginx-server.sh")
 }
 
 resource "google_project_service" "compute" {
